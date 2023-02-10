@@ -16,6 +16,6 @@ import predict from "future-promise";
 globalThis.Foo = predict(import("foo-client")).default;
 
 ... some other file
-const client new Foo.Client(...);
+const client = new Foo.Client(...);
 const res = await client.where(...).exec();
 ```
