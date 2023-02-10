@@ -1,5 +1,5 @@
 {
-  "name": "predict",
+  "name": "future-promise",
   "version": "0.1.0",
   "description": "Predict the future of Promise",
   "main": "dist/index.js",

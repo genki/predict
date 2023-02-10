@@ -10,7 +10,7 @@ USAGE
 You can use `Promise` object as if a normal object.
 
 ```ts
-import predict from "predict";
+import predict from "future-promise";
 
 // dynamic import to global scope
 globalThis.Foo = predict(import("foo-client")).default;
