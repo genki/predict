@@ -1,5 +1,5 @@
 import { describe, it, expect, beforeAll, afterAll } from 'vitest';
-import predict from '../src/index';
+import predict from "../src/index";
 
 describe('[predict]', () => {
   it('should predict a promise', async () => {
