@@ -7,11 +7,10 @@ describe('[predict]', () => {
       done({
         foo: 'foo',
         bar: 'bar',
-        baz: {
-          qux: 'qux',
-        },
+        baz: { qux: 'qux', },
         fn: () => 'fn',
         chain: () => () => 'chain',
+        async: () => new Promise(_ => setTimeout(() => _('async'), 0)),
       });
     }));
     expect(await p.foo).toBe('foo');
@@ -19,6 +18,7 @@ describe('[predict]', () => {
     expect(await p.baz.qux).toBe('qux');
     expect(await p.fn()).toBe('fn');
     expect(await p.chain()()).toBe('chain');
+    expect(await p.async()).toBe('async');
   });
 
   it('can predict construction', async () => {
