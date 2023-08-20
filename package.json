@@ -1,6 +1,6 @@
 {
   "name": "future-promise",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Predict the future of Promise",
   "main": "dist/index.js",
   "module": "dist/esm/index.js",
@@ -17,12 +17,14 @@
   },
   "author": "Genki Takiuchi",
   "license": "ISC",
+  "homepage": "https://github.com/genki/predict",
   "devDependencies": {
-    "@types/node": "^18.11.18",
+    "@types/node": "^18.17.6",
     "npm-run-all": "^4.1.5",
-    "rimraf": "^4.1.0",
+    "rimraf": "^4.4.1",
+    "std-env": "^3.4.0",
     "ts-node": "^10.9.1",
-    "typescript": "^4.9.4",
-    "vitest": "^0.27.2"
+    "typescript": "^4.9.5",
+    "vitest": "^0.27.3"
   }
 }

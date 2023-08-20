@@ -3,15 +3,13 @@ import predict from "../src/index";
 
 describe('[predict]', () => {
   it('should predict a promise', async () => {
-    const p = predict(new Promise((done) => {
-      done({
-        foo: 'foo',
-        bar: 'bar',
-        baz: { qux: 'qux', },
-        fn: () => 'fn',
-        chain: () => () => 'chain',
-        async: () => new Promise(_ => setTimeout(() => _('async'), 0)),
-      });
+    const p = predict(Promise.resolve({
+      foo: 'foo',
+      bar: 'bar',
+      baz: { qux: 'qux', },
+      fn: () => 'fn',
+      chain: () => () => 'chain',
+      async: () => new Promise(_ => setTimeout(() => _('async'), 0)),
     }));
     expect(await p.foo).toBe('foo');
     expect(await p.bar).toBe('bar');
